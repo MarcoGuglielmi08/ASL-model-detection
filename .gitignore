@@ -1,0 +1,13 @@
+data/ASL_Alphabet_Dataset/
+.vscode
+.idea/
+*.iml
+
+logs/
+__pycache__/
+*.py[cod]
+tempCodeRunnerFile.py
+
+
+.venv
+data/

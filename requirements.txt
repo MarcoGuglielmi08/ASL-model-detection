@@ -1,0 +1,14 @@
+
+matplotlib
+mediapipe
+numpy==1.26.4
+pandas
+scikit-learn
+seaborn
+opencv-python
+pillow
+customtkinter
+joblib
+scipy
+scikit-posthocs
+shap

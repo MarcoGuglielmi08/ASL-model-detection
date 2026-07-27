@@ -1,0 +1,5 @@
+comparison,W_statistic,p_value,significant_0.05
+HistGradientBoosting vs Approx RBF SVM,15.0,0.03125,True
+HistGradientBoosting vs Decision Tree,15.0,0.03125,True
+HistGradientBoosting vs KNN,15.0,0.03125,True
+HistGradientBoosting vs Random Forest,15.0,0.03125,True
