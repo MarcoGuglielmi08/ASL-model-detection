@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# ASL-model-detection
-=======
 # ASL Model Detection
 
 This project recognizes ASL (American Sign Language) alphabet letters from hand images.
@@ -13,7 +10,7 @@ Classify ASL letters using compact and interpretable hand-landmark features.
 
 ## Project Structure
 
-```text
+
 pipeline.py                          Full project pipeline
 src/extraction/                      MediaPipe extraction logic
 src/preprocessing/                   Data checks and cleaning
@@ -25,7 +22,7 @@ notebooks/dataset/                   Dataset setup notebook
 notebooks/preprocessing/             EDA and preprocessing analysis notebooks
 notebooks/modeling/                  Model selection and report figure notebooks
 data/                                Dataset and generated CSV files
-```
+
 
 ## Pipeline
 
@@ -34,10 +31,10 @@ data/                                Dataset and generated CSV files
 
    Main outputs:
 
-   ```text
+   
    data/asl_landmarks_mediapipe.csv
    data/asl_landmarks_failed.csv
-   ```
+
 
 2. **Run data quality checks**
    Remove invalid rows, missing landmarks, geometric outliers, and inconsistent hand structures.
@@ -47,64 +44,64 @@ data/                                Dataset and generated CSV files
 
    Output:
 
-   ```text
+   
    data/asl_features_engineered.csv
-   ```
+   
 
 4. **Select best model**
    Compare multiple classifiers with nested cross-validation and choose the best one by macro F1 score.
 
    Outputs:
 
-   ```text
+    
    models/group_nested_kfold_cv_results.csv
    models/group_nested_kfold_cv_fold_results.csv
-   ```
+    
 
 5. **Final training**
    Retrain the selected model on the full processed dataset and save it for inference/demo use.
 
    Output:
 
-   ```text
+    
    models/asl_model.pkl
-   ```
+    
 
 ## Setup
 
-```powershell
+ powershell
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
-```
+ 
 
 ## Run
 
 Extract landmarks only:
 
-```powershell
+ powershell
 .\.venv\Scripts\python.exe src\extraction\mediapipe_landmarks_extractor.py
-```
+ 
 
 Run the full pipeline:
 
-```powershell
+ powershell
 .\.venv\Scripts\python.exe pipeline.py
-```
+ 
 
 Start webcam demo:
 
-```powershell
+ powershell
 .\.venv\Scripts\python.exe src\app\sign_language_app.py
-```
+ 
 
 ## Dataset
 
 Put the dataset under:
 
-```text
+ 
 data/ASL_Alphabet_Dataset/asl_alphabet_train/
-```
+ 
 
 Expected format: one subfolder per letter/class.
 
