@@ -13,12 +13,13 @@ from sklearn.tree import DecisionTreeClassifier
 
 from src.util.preprocessor import make_preprocessor
 from src.util.paths import DATA_DIR, MODELS_DIR
+from util.paths import NESTED_DIR
 
 
 # Train the final classifier selected by nested cross-validation.
 class Trainer:
     DATA_PATH = DATA_DIR / "asl_features_engineered.csv"
-    RESULTS_PATH = MODELS_DIR / "group_nested_kfold_cv_results.csv"
+    RESULTS_PATH = NESTED_DIR / "group_nested_kfold_cv_results.csv"
     MODEL_OUTPUT_PATH = MODELS_DIR / "asl_model.pkl"
 
     TARGET_COLUMN = "label"

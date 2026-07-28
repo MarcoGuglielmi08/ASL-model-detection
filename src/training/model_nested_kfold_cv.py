@@ -4,6 +4,7 @@ from time import perf_counter
 
 from src.util.preprocessor import make_preprocessor
 from src.util.paths import DATA_DIR, MODELS_DIR
+from util.paths import NESTED_DIR, RESULTS_DIR
 
 # Avoid CPU oversubscription when GridSearchCV runs multiple fits in parallel.
 os.environ.setdefault("OMP_NUM_THREADS", "1")
@@ -28,10 +29,10 @@ from sklearn.tree import DecisionTreeClassifier
 # Run grouped nested cross-validation and store report-ready outputs.
 class ModelNestedKFold:
     DATA_PATH = DATA_DIR / "asl_features_engineered.csv"
-    SUMMARY_OUTPUT_PATH = MODELS_DIR / "group_nested_kfold_cv_results.csv"
-    FOLD_OUTPUT_PATH = MODELS_DIR / "group_nested_kfold_cv_fold_results.csv"
-    CV_RESULTS_DIR = MODELS_DIR / "grid_search_cv_results"
-    ERROR_ANALYSIS_DIR = MODELS_DIR / "error_analysis_figures"
+    SUMMARY_OUTPUT_PATH = NESTED_DIR/ "group_nested_kfold_cv_results.csv"
+    FOLD_OUTPUT_PATH = NESTED_DIR / "group_nested_kfold_cv_fold_results.csv"
+    CV_RESULTS_DIR = RESULTS_DIR / "grid_search_cv_results"
+    ERROR_ANALYSIS_DIR = RESULTS_DIR / "error_analysis"
     OOF_PREDICTIONS_PATH = ERROR_ANALYSIS_DIR / "histgradientboosting_oof_predictions.csv"
 
     TARGET_COLUMN = "label"

@@ -7,7 +7,7 @@ import mediapipe as mp
 from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core.base_options import BaseOptions
 
-from src.util.paths import DATA_DIR, MODELS_DIR
+from src.util.paths import DATA_DIR, ASSETS_DIR
 
 
 # Extract one normalized MediaPipe hand landmark vector for each image.
@@ -20,7 +20,7 @@ class MediapipeLandmarksExtractor:
 
     FAILED_CSV = DATA_DIR / "asl_landmarks_failed.csv"
 
-    MODEL_PATH = MODELS_DIR / "hand_landmarker.task"
+    MODEL_PATH = ASSETS_DIR / "hand_landmarker.task"
 
     LIMIT = None
     MAX_IMAGE_SIZE = 640

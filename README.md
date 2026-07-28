@@ -108,6 +108,6 @@ Expected format: one subfolder per letter/class.
 ## Notes
 
 - Generated CSV files in `data/` can be large and may not be committed.
-- `models/hand_landmarker.task` is required for MediaPipe landmark extraction.
+- `assets/hand_landmarker.task` is required for MediaPipe landmark extraction.
 - Nested cross-validation can take a long time on the full dataset.
 

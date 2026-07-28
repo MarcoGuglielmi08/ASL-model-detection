@@ -5,11 +5,13 @@ import pandas as pd
 import scikit_posthocs as sp
 from scipy.stats import friedmanchisquare, wilcoxon
 
+from util.paths import NESTED_DIR, STATISTICS_DIR
+
 
 # Run non-parametric tests on the outer-fold model scores.
 class StatisticalTesting:
-    CSV_PATH = Path("models/group_nested_kfold_cv_fold_results.csv")
-    OUTPUT_DIR = Path("statistical_tests")
+    CSV_PATH = NESTED_DIR / "group_nested_kfold_cv_fold_results.csv"
+    OUTPUT_DIR = STATISTICS_DIR
     SCORE_COL = "f1_macro_pct"
     BEST_MODEL = "HistGradientBoosting"
     ALPHA = 0.05

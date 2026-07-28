@@ -3,6 +3,8 @@ import matplotlib
 import numpy as np
 import pandas as pd
 
+from util.paths import RESULTS_DIR
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -17,11 +19,11 @@ from src.util.paths import DATA_DIR, MODELS_DIR
 class ModelExplainability:
     DATA_PATH = DATA_DIR / "asl_features_engineered.csv"
     MODEL_PATH = MODELS_DIR / "asl_model.pkl"
-    OUTPUT_DIR = MODELS_DIR / "explainability_figures"
+    OUTPUT_DIR = RESULTS_DIR / "explainability"
 
     OOF_PREDICTIONS_PATH = (
         MODELS_DIR
-        / "error_analysis_figures"
+        / "error_analysis"
         / "histgradientboosting_oof_predictions.csv"
     )
 
