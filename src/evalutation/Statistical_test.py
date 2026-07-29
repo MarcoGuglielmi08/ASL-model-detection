@@ -5,7 +5,7 @@ import pandas as pd
 import scikit_posthocs as sp
 from scipy.stats import friedmanchisquare, wilcoxon
 
-from util.paths import NESTED_DIR, STATISTICS_DIR
+from utils.paths import NESTED_DIR, STATISTICS_DIR
 
 
 # Run non-parametric tests on the outer-fold model scores.
@@ -32,7 +32,7 @@ class StatisticalTesting:
         nemenyi_df = self._run_nemenyi(pivot) if friedman_p < self.ALPHA else None
 
         self._save_results(wilcoxon_df, friedman_stat, friedman_p, nemenyi_df)
-        print("Statistical testing complete.")
+        print("Statistical evalutation complete.")
 
     def _run_wilcoxon(self, df: pd.DataFrame) -> pd.DataFrame:
         # Compare the selected model against each alternative model.

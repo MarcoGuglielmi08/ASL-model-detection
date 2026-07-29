@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from src.util.paths import DATA_DIR
+from src.utils.paths import DATA_DIR
 
 
 # Second cleaning stage: remove geometrically implausible detections.

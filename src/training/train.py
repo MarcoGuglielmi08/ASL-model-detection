@@ -11,9 +11,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 
-from src.util.preprocessor import make_preprocessor
-from src.util.paths import DATA_DIR, MODELS_DIR
-from util.paths import NESTED_DIR
+from src.utils.preprocessor import make_preprocessor
+from src.utils.paths import DATA_DIR, MODELS_DIR
+from utils.paths import NESTED_DIR
 
 
 # Train the final classifier selected by nested cross-validation.

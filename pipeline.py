@@ -3,8 +3,8 @@ from src.preprocessing.DataIntegrityCheck import DataIntegrityCheck
 from src.preprocessing.FeatureEngineering import FeatureEngineering
 from src.preprocessing.GeometricOutlier import GeometricOutlierCheck
 from src.preprocessing.StructuralConsistencyCheck import StructuralConsistencyCheck
-from src.testing.ModelExplainability import ModelExplainability
-from src.testing.Statistical_test import StatisticalTesting
+from src.evalutation.ModelExplainability import ModelExplainability
+from src.evalutation.Statistical_test import StatisticalTesting
 from src.training.model_nested_kfold_cv import ModelNestedKFold
 from src.training.train import Trainer
 

@@ -2,9 +2,9 @@ import json
 import os
 from time import perf_counter
 
-from src.util.preprocessor import make_preprocessor
-from src.util.paths import DATA_DIR, MODELS_DIR
-from util.paths import NESTED_DIR, RESULTS_DIR
+from src.utils.preprocessor import make_preprocessor
+from src.utils.paths import DATA_DIR, MODELS_DIR
+from utils.paths import NESTED_DIR, RESULTS_DIR
 
 # Avoid CPU oversubscription when GridSearchCV runs multiple fits in parallel.
 os.environ.setdefault("OMP_NUM_THREADS", "1")

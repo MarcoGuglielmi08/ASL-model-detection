@@ -3,7 +3,7 @@ import matplotlib
 import numpy as np
 import pandas as pd
 
-from util.paths import RESULTS_DIR
+from utils.paths import RESULTS_DIR
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -12,7 +12,7 @@ from sklearn.inspection import permutation_importance
 from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
-from src.util.paths import DATA_DIR, MODELS_DIR
+from src.utils.paths import DATA_DIR, MODELS_DIR
 
 
 # Generate global and local explanations for the final trained model.

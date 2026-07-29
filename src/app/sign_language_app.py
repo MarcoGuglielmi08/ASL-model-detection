@@ -15,8 +15,8 @@ import time
 import math
 import threading
 
-from src.util.paths import MODELS_DIR
-from util.paths import ASSETS_DIR
+from src.utils.paths import MODELS_DIR
+from utils.paths import ASSETS_DIR
 
 # Window, model, and camera settings.
 WINDOW_WIDTH = 1500

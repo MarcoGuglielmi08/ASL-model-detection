@@ -7,7 +7,7 @@ import mediapipe as mp
 from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core.base_options import BaseOptions
 
-from src.util.paths import DATA_DIR, ASSETS_DIR
+from src.utils.paths import DATA_DIR, ASSETS_DIR
 
 
 # Extract one normalized MediaPipe hand landmark vector for each image.
