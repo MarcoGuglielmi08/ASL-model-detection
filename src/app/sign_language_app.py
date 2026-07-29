@@ -16,12 +16,13 @@ import math
 import threading
 
 from src.util.paths import MODELS_DIR
+from util.paths import ASSETS_DIR
 
 # Window, model, and camera settings.
 WINDOW_WIDTH = 1500
 WINDOW_HEIGHT = 900
 
-LANDMARK_MODEL_PATH = MODELS_DIR / "hand_landmarker.task"
+LANDMARK_MODEL_PATH = ASSETS_DIR / "hand_landmarker.task"
 CLASSIFIER_MODEL_PATH = MODELS_DIR / "asl_model.pkl"
 
 USE_Z = False
