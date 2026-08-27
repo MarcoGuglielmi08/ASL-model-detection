@@ -233,7 +233,7 @@ Differences between HistGradientBoosting and every other candidate were statisti
 
 ## 📄Full project report
 
-(methodology, EDA, hyperparameter search, statistical tests, SHAP analysis): [`docs/DMML_project_report.pdf`](docs/DMML_project_template.pdf)
+(methodology, EDA, hyperparameter search, statistical tests, SHAP analysis, limitations): [`docs/DMML_project_report.pdf`](docs/DMML_project_template.pdf)
 
 ---
 ## 📝 Notes
