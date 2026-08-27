@@ -210,6 +210,29 @@ All evaluation artifacts are stored under the `results/` directory.
 
 ---
 
+## 📊 Results
+ 
+Model selection was performed using **5×4 nested cross-validation** with group-stratified folds (groups built from feature hashes to prevent leakage from near-duplicate samples). Five classifiers were compared — KNN, Decision Tree, Random Forest, HistGradientBoosting, and an Approximate RBF SVM — spanning distance-based, tree-based, ensemble, boosting, and kernel-approximation approaches.
+ 
+**HistGradientBoosting** achieved the best performance and was selected as the final model:
+ 
+| Model | Inner macro F1 | Outer macro F1 |
+|---|---|---|
+| Decision Tree | 92.95% | 93.28% |
+| Approx RBF SVM | 95.83% | 96.02% |
+| KNN | 96.53% | 96.81% |
+| Random Forest | 96.60% | 96.83% |
+| **HistGradientBoosting** | **97.04%** | **97.31%** |
+ 
+**Final model performance (outer test folds):**
+- **Accuracy:** 97.49%
+- **Macro F1:** 97.31%
+Differences between HistGradientBoosting and every other candidate were statistically significant (Wilcoxon signed-rank test, p = 0.03125 for all pairwise comparisons; Friedman test statistic = 19.36, p < 0.001).
+
+
+## 📄Full project report
+(methodology, EDA, hyperparameter search, statistical tests, SHAP analysis): [`docs/DMML_project_report.pdf`](docs/DMML_project_template.pdf)
+
 ## 📝 Notes
 
 - Generated CSV files and analysis outputs may be large and are therefore not necessarily committed to the repository.
