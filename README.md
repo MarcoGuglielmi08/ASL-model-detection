@@ -229,10 +229,13 @@ Model selection was performed using **5×4 nested cross-validation** with group-
 - **Macro F1:** 97.31%
 Differences between HistGradientBoosting and every other candidate were statistically significant (Wilcoxon signed-rank test, p = 0.03125 for all pairwise comparisons; Friedman test statistic = 19.36, p < 0.001).
 
+---
 
 ## 📄Full project report
+
 (methodology, EDA, hyperparameter search, statistical tests, SHAP analysis): [`docs/DMML_project_report.pdf`](docs/DMML_project_template.pdf)
 
+---
 ## 📝 Notes
 
 - Generated CSV files and analysis outputs may be large and are therefore not necessarily committed to the repository.
